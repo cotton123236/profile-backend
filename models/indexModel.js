@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const { Schema, model } = mongoose
 
+
 const indexSchema = new Schema({
   about: {
     type: mongoose.Types.ObjectId,
@@ -10,6 +11,12 @@ const indexSchema = new Schema({
     {
       type: mongoose.Types.ObjectId,
       ref: 'Work'
+    }
+  ],
+  projects: [
+    {
+      type: mongoose.Types.ObjectId,
+      ref: 'Project'
     }
   ]
 }, {

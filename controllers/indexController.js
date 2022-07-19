@@ -8,11 +8,10 @@ const { captureError } = errors
 const getIndex = captureError(async (req, res, next) => {
   const data = await Index.find()
   .populate({
-    path: 'about works',
+    path: 'about works projects',
   })
   success(res, data[0])
 })
-
 
 module.exports = {
   getIndex

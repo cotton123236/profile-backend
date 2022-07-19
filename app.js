@@ -8,8 +8,9 @@ const errors = require('./utils/errors')
 const status = require('./utils/status')
 
 const indexRouter = require('./routes/index')
-const worksRouter = require('./routes/works')
 const aboutRouter = require('./routes/about')
+const worksRouter = require('./routes/works')
+const projectsRouter = require('./routes/projects')
 
 const {
   createError,
@@ -34,8 +35,9 @@ app.use(cors())
 
 // routes
 app.use('/api/index', indexRouter)
-app.use('/api/works', worksRouter)
 app.use('/api/about', aboutRouter)
+app.use('/api/works', worksRouter)
+app.use('/api/projects', projectsRouter)
 app.use((req, res, next) => next(createError(status.notFound)))
 
 // error handle
