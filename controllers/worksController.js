@@ -12,12 +12,13 @@ const getWorks = captureError(async (req, res, next) => {
 
 const postWork = captureError(async (req, res, next) => {
   const { body } = req
-  const { title, subTitle, image, href } = body
+  const { title, subTitle, image, href, tech } = body
   const data = await Works.create({
     title,
     subTitle,
     image,
-    href
+    href,
+    tech
   })
   success(res, data)
 })
