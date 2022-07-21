@@ -10,7 +10,8 @@ const worksSchema = new Schema({
   title: StrObj,
   subTitle: StrObj,
   image: StrObj,
-  href: StrObj
+  href: StrObj,
+  tech: StrObj
 }, {
   versionKey: false
 })
